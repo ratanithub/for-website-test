@@ -1,0 +1,129 @@
+/* Basic Body Style */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Custom Navbar Background Color */
+.custom-navbar-bg {
+    background-color: #008080; /* Teal color from original */
+}
+
+/* Navbar Link Color */
+.custom-navbar-bg .navbar-brand,
+.custom-navbar-bg .nav-link {
+    color: #ffffff; /* White text */
+}
+.custom-navbar-bg .nav-link:hover,
+.custom-navbar-bg .nav-link.active {
+    color: #e0e0e0; /* Lighter white on hover/active */
+}
+.custom-navbar-bg .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3); /* Lighter border for toggler */
+}
+.custom-navbar-bg .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* White toggler icon */
+}
+
+
+/* Make dropdown menu items dark text on light background (standard) */
+.dropdown-menu .dropdown-item {
+    color: #212529;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e9ecef;
+}
+
+
+.site-url {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Header Logos Bar - Top */
+.logo-link-top img {
+    height: 30px; /* Fixed height for logos */
+    max-width: none; /* Override default max-width */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+    border: 1px solid #ddd; /* Slight border like original */
+    padding: 2px;
+    background-color: #fff;
+}
+
+/* Main Content Title */
+.section-title {
+    font-size: 1.8em;
+    color: #0056b3; /* Blue color for the title */
+    font-weight: bold;
+    border-bottom: 2px solid #eee;
+}
+
+.section-title .title-bar {
+    color: #0056b3; /* Matching blue */
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Newspaper Card Styling */
+.newspaper-card {
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+.newspaper-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-color: #ccc;
+}
+
+.newspaper-logo {
+    max-height: 50px; /* Limit logo height */
+    width: auto !important; /* Override Bootstrap width if needed, maintain aspect ratio */
+    object-fit: contain; /* Ensure logo fits nicely */
+}
+
+.newspaper-name {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.3; /* Adjust line height for name */
+}
+
+/* Advertisement Adjustments */
+.advertisement {
+    /* Using Bootstrap classes for background, border, padding */
+    text-align: center; /* Ensure content is centered */
+}
+.ad-close-btn {
+    position: absolute;
+    top: 0.5rem; /* Position using Bootstrap spacing */
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem; /* Adjust padding if needed */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 50%;
+}
+
+/* Responsive Adjustments (Bootstrap handles most grid changes) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5em;
+    }
+     .logo-link-top img {
+         height: 28px; /* Slightly smaller logos */
+     }
+}
+
+@media (max-width: 576px) {
+    .newspaper-logo {
+        max-height: 40px; /* Smaller logos on smallest screens */
+    }
+    .newspaper-name {
+        font-size: 0.8em;
+    }
+    .logo-link-top img {
+         height: 25px;
+     }
+}

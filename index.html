@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Bangla Newspapers - Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome (Optional, for icons like Home) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Your Custom CSS (Load AFTER Bootstrap to override) -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <!-- Top Navigation Bar -->
+        <nav class="navbar navbar-expand-lg custom-navbar-bg">
+            <div class="container">
+                <a class="navbar-brand site-url" href="#">www.allbanglanewspaper.xyz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Newspapers
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Add dropdown items here -->
+                                <li><a class="dropdown-item" href="#">Category 1</a></li>
+                                <li><a class="dropdown-item" href="#">Category 2</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Another Category</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sharebazar Newspaper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bangla Converter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Submit Newspaper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Logos Bar -->
+        <div class="header-logos py-2 border-bottom bg-light">
+             <div class="container">
+                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-3">
+                    <!-- Placeholder logos for the top bar -->
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=bdnews24" alt="BDNews24"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=Protidhin" alt="Bangladesh Pratidin"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=Ittefaq" alt="Ittefaq"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=KalerK" alt="Kaler Kantho"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=JagoNews" alt="JagoNews24"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=AnandaP" alt="Anandabazar"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=ProthomA" alt="Prothom Alo"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=Samakal" alt="Samakal"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/60x30/008000/ffffff?text=NTV" alt="NTV"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/80x30/cccccc/000000?text=BBC" alt="BBC Bangla"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=NoyaD" alt="Naya Diganta"></a>
+                    <a href="#" class="logo-link-top"><img src="https://via.placeholder.com/100x30/cccccc/000000?text=Jugantor" alt="Jugantor"></a>
+                 </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4"> <!-- my-4 adds vertical margin -->
+        <h2 class="section-title pb-2 mb-4"><span class="title-bar">|</span> ALL BANGLA NEWSPAPERS</h2>
+
+        <div class="row g-3"> <!-- g-3 adds gutters (spacing) between columns -->
+
+            <!-- Newspaper Items as Cards -->
+            <!-- Column classes define width: col-6 (2 cols on xs), col-sm-4 (3 cols on sm), col-md-3 (4 cols on md), col-lg-2 (6 cols on lg/xl) -->
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                   <img src="images/prothom_alo.jpg" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Prothom Alo">
+
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Prothom alo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=BD+Pratidin" class="card-img-top newspaper-logo mx-auto mt-3" alt="Bangladesh Pratidin">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Bangladesh Pratidin</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Ittefaq" class="card-img-top newspaper-logo mx-auto mt-3" alt="Ittefaq">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Ittefaq</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Kaler+Kantho" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Kaler kantho">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Kaler kantho</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Naya+Diganta" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Naya Diganta">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Naya Diganta</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Amar+Sangbad" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Amar Sangbad">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Amar Sangbad</p>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Protidin+Sangbad" class="card-img-top newspaper-logo mx-auto mt-3" alt="Protidiner Sangbad">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Protidiner Sangbad</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Jugantor" class="card-img-top newspaper-logo mx-auto mt-3" alt="Jugantor">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Jugantor</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Sangram" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Sangram">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Sangram</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Manab+Zamin" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Manab Zamin">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Manab Zamin</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Amader+Shomoy" class="card-img-top newspaper-logo mx-auto mt-3" alt="Dainik Amadershomoy">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Dainik Amadershomoy</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Bonik+Barta" class="card-img-top newspaper-logo mx-auto mt-3" alt="Bonik Barta">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Bonik Barta</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <!-- Place it logically within the grid flow -->
+            <!-- Spans full width on small, half width on medium+, centered -->
+            <div class="col-12 col-md-6 offset-md-3 my-3" id="ad-container">
+                 <div class="advertisement p-3 border rounded bg-light position-relative">
+                     <button type="button" class="btn-close ad-close-btn" aria-label="Close" id="close-ad-btn"></button>
+                     <img src="https://via.placeholder.com/300x250/007bff/ffffff?text=Advertisement+(e.g.,+Namecheap)" class="img-fluid d-block mx-auto mb-2" alt="Advertisement">
+                     <p class="text-center mb-0"><strong>Placeholder Ad</strong><br>Your ad content here.</p>
+                 </div>
+            </div>
+
+            <!-- More newspaper cards -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Samakal" class="card-img-top newspaper-logo mx-auto mt-3" alt="Samakal">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Samakal</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Janakantha" class="card-img-top newspaper-logo mx-auto mt-3" alt="Janakantha">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Janakantha</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Jai+Jai+Din" class="card-img-top newspaper-logo mx-auto mt-3" alt="Jai Jai Din">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Jai Jai Din</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Bhorer+Kagoj" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Bhorer Kagoj">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Bhorer Kagoj</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Arthoniteer+K" class="card-img-top newspaper-logo mx-auto mt-3" alt="Arthoniteer Kagoj">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Arthoniteer Kagoj</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Inqilab" class="card-img-top newspaper-logo mx-auto mt-3" alt="Daily Inqilab">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Daily Inqilab</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Sangbad" class="card-img-top newspaper-logo mx-auto mt-3" alt="Sangbad">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Sangbad</p>
+                    </div>
+                </a>
+            </div>
+             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                 <a href="#" class="card newspaper-card h-100 text-decoration-none">
+                    <img src="https://via.placeholder.com/150x50/eeeeee/000000?text=Manob+Kantha" class="card-img-top newspaper-logo mx-auto mt-3" alt="Manob Kantha">
+                    <div class="card-body text-center pt-2 pb-2">
+                        <p class="card-text newspaper-name">Manob Kantha</p>
+                    </div>
+                </a>
+            </div>
+
+        </div> <!-- End .row -->
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-4">
+        <div class="container">
+            <p class="mb-0">© 2023 Your Website Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Your Custom JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
