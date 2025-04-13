@@ -1,87 +1,225 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Untitled</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Bangla Newspapers - Bootstrap</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Font Awesome (Optional, for icons like Home) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Your Custom CSS (Load AFTER Bootstrap to override) -->
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Bangla Newspapers - Bootstrap</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Font Awesome (Optional, for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <style>
+    /* Basic Body Style */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4; /* Light grey background */
+    }
+    
+    /* Custom Navbar Background Color */
+    .custom-navbar-bg {
+      background-color: #008080; /* Teal color */
+    }
+    .custom-navbar-bg .navbar-brand,
+    .custom-navbar-bg .nav-link {
+      color: #ffffff;
+    }
+    .custom-navbar-bg .nav-link:hover,
+    .custom-navbar-bg .nav-link.active {
+      color: #e0e0e0;
+    }
+    .custom-navbar-bg .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .custom-navbar-bg .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Header Logos Bar (only for desktop/tablet) */
+    .header-logos {
+      background-color: #008080;
+    }
+    
+    /* Custom Media Query: Hide header logos on mobile devices */
+    @media (max-width: 768px) {
+      .header-logos {
+        display: none !important;
+      }
+    }
+    
+    /* Header Logos Bar styling */
+    .logo-link-top img {
+      height: 30px;
+      max-width: none;
+      width: auto;
+      vertical-align: middle;
+      border: 1px solid #ddd;
+      padding: 2px;
+      background-color: #fff;
+    }
+    
+    /* Main Content Title */
+    .section-title {
+      font-size: 1.8em;
+      color: #0056b3;
+      font-weight: bold;
+      border-bottom: 2px solid #eee;
+    }
+    .section-title .title-bar {
+      color: #0056b3;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    
+    /* Newspaper Card Styling */
+    .newspaper-card {
+      border: 1px solid #ddd;
+      transition: box-shadow 0.3s ease;
+    }
+    .newspaper-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-color: #ccc;
+    }
+    .newspaper-logo {
+      max-height: 50px;
+      width: auto !important;
+      object-fit: contain;
+    }
+    .newspaper-name {
+      margin: 0;
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.3;
+    }
+    
+    /* Advertisement Adjustments */
+    .advertisement {
+      text-align: center;
+      position: relative;
+    }
+    .ad-close-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 576px) {
+      .newspaper-logo {
+        max-height: 40px;
+      }
+      .newspaper-name {
+        font-size: 0.8em;
+      }
+      .logo-link-top img {
+        height: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <!-- Top Navigation Bar -->
-        <nav class="navbar navbar-expand-lg custom-navbar-bg">
-            <div class="container">
-                <a class="navbar-brand site-url" href="#">www.allbanglanewspapersbd.xyz</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Newspapers
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!-- Add dropdown items here -->
-                                <li><a class="dropdown-item" href="#">Category 1</a></li>
-                                <li><a class="dropdown-item" href="#">Category 2</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Another Category</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sharebazar Newspaper</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bangla Converter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Submit Newspaper</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Header Logos Bar -->
-        <div class="header-logos py-2 border-bottom" style="background-color: #008080;">
-             <div class="container">
-                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-3">
-                    <!-- Placeholder logos for the top bar -->
-                     <a href="https://bangla.bdnews24.com/" target="_blank" class="logo-link-top">
-    <img src="images/news-bangla.bdnews24.com.jpg" alt="BDNews24"></a><a href="https://www.bd-pratidin.com/" target="_blank" class="logo-link-top"><img src="images/news-bd-pratidin.com.jpg" alt="Bangladesh Pratidin"></a><a href="https://www.ittefaq.com.bd/" target="_blank" class="logo-link-top"><img src="images/news-ittefaq.com.bd.jpg" alt="Ittefaq"></a><a href="https://www.kalerkantho.com/" target="_blank" class="logo-link-top"><img src="images/news-kalerkantho.com.jpg" alt="Kaler Kantho"></a><a href="https://www.jagonews24.com/" target="_blank" class="logo-link-top"><img src="images/news-jagonews24.com.jpg" alt="JagoNews24"></a><a href="https://www.anandabazar.com/" target="_blank" class="logo-link-top"><img src="images/news-anandabazar.com.jpg" alt="Anandabazar"></a> <a href="https://www.prothomalo.com/" target="_blank" class="logo-link-top"><img src="images/news-prothom-alo.com.jpg" alt="Prothom Alo"></a><a href="https://www.samakal.com/" target="_blank" class="logo-link-top"><img src="images/news-samakal.net.jpg" alt="Samakal"></a><a href="https://www.ntvbd.com/" target="_blank" class="logo-link-top"><img src="images/news-ntvbd.com.jpg" alt="NTV"></a><a href="https://www.bbc.com/bengali" target="_blank" class="logo-link-top"><img src="images/news-bbc.com.jpg" alt="BBC Bangla"></a><a href="https://www.dailynayadiganta.com/" target="_blank" class="logo-link-top"><img src="images/news-dailynayadiganta.com.jpg" alt="Naya Diganta"></a><a href="https://www.jugantor.com/" target="_blank" class="logo-link-top"><img src="images/news-jugantor.com.jpg" alt="Jugantor"></a>
-                 </div>
-            </div>
+  <!-- Header -->
+  <header>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar-bg">
+      <div class="container">
+        <a class="navbar-brand site-url" href="#">www.allbanglanewspapersbd.xyz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Newspapers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Category 1</a></li>
+                <li><a class="dropdown-item" href="#">Category 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Another Category</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sharebazar Newspaper</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bangla Converter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Submit Newspaper</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
         </div>
-    </header>
-
-<main class="container my-4">
+      </div>
+    </nav>
+    
+    <!-- Header Logos Bar (visible on medium and larger screens only) -->
+    <div class="header-logos py-2 border-bottom d-none d-md-block">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-3">
+          <a href="https://bangla.bdnews24.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-bangla.bdnews24.com.jpg" alt="BDNews24">
+          </a>
+          <a href="https://www.bd-pratidin.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-bd-pratidin.com.jpg" alt="Bangladesh Pratidin">
+          </a>
+          <a href="https://www.ittefaq.com.bd/" target="_blank" class="logo-link-top">
+            <img src="images/news-ittefaq.com.bd.jpg" alt="Ittefaq">
+          </a>
+          <a href="https://www.kalerkantho.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-kalerkantho.com.jpg" alt="Kaler Kantho">
+          </a>
+          <a href="https://www.jagonews24.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-jagonews24.com.jpg" alt="JagoNews24">
+          </a>
+          <a href="https://www.anandabazar.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-anandabazar.com.jpg" alt="Anandabazar">
+          </a>
+          <a href="https://www.prothomalo.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-prothom-alo.com.jpg" alt="Prothom Alo">
+          </a>
+          <a href="https://www.samakal.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-samakal.net.jpg" alt="Samakal">
+          </a>
+          <a href="https://www.ntvbd.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-ntvbd.com.jpg" alt="NTV">
+          </a>
+          <a href="https://www.bbc.com/bengali" target="_blank" class="logo-link-top">
+            <img src="images/news-bbc.com.jpg" alt="BBC Bangla">
+          </a>
+          <a href="https://www.dailynayadiganta.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-dailynayadiganta.com.jpg" alt="Naya Diganta">
+          </a>
+          <a href="https://www.jugantor.com/" target="_blank" class="logo-link-top">
+            <img src="images/news-jugantor.com.jpg" alt="Jugantor">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+ <main class="container my-4">
   <h2 class="section-title pb-2 mb-4">
     <span class="title-bar">|</span> ALL BANGLA NEWSPAPERS
   </h2>
@@ -302,26 +440,31 @@
   <!-- End row -->
 </main>
 
-
-    <footer class="bg-dark text-light text-center py-3 mt-4">
-        <div class="container">
-            <p class="mb-0">© 2023 Your Website Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <!-- Your Custom JS -->
-    <script src="script.js"></script>
-
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3 mt-4">
+    <div class="container">
+      <p class="mb-0">© 2023 Your Website Name. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+          crossorigin="anonymous"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    // Wait for the document to be fully loaded
+    $(document).ready(function() {
+      // Close the advertisement when the close button is clicked
+      $('#close-ad-btn').on('click', function(){
+        $('#ad-container').fadeOut('slow');
+      });
+    });
+  </script>
+  
 </body>
 </html>
